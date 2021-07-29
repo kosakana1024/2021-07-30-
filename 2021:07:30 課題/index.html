@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小坂菜緒</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>  
+    <header>
+        <div class="head">
+            <div class="head-img"><img src="images/header/IMG_0499.JPG" alt=""></div>
+        </div>
+    </header>
+
+        <div class="about">
+            <p class="about1">小坂 菜緒</p>
+            <p class="about2">小坂菜緒は女性アイドルグループ「日向坂46」のメンバー</p>
+            <p class="about3">1st~4thシングルの全センターを務めており”不動のエース”と呼ばれている</p>
+            <p class="about4">大阪府出身18歳、愛称は「こさかな」</p>
+        </div>
+
+        
+        <div class="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K5HPhoqyO4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    <div class="game">
+        <p class="game1">小坂菜緒のミニゲーム</p>
+        <div class="main"><img src="images/main/M4FDeVKDayesG5fbiK0kx1Tc9rWir7ovY23Hq7ErwTM.jpeg" alt="" width="1000"></div>
+
+        <div class="hukidashi">
+            <img src="images/header/IMG_2083.PNG" alt="" width="900">
+            <p>菜緒とじゃんけんしよう〜！<br>勝ったらいいことあるかも？笑</p>
+        </div>
+    </div>
+
+    <main>
+        <ul>
+        <li id="gu_btn"><img src="images/rock/IMG_2084.JPG" alt=""></li>
+        <li id="cho_btn"><img src="images/scissors/IMG_2087.JPG" alt=""></li>
+        <li id="par_btn"><img src="images/paper/IMG_2086.JPG" alt=""></li>
+        </ul>
+        <div id="com_hand">コンピュータの出した手は？</div>
+        <div id="result">結果は？</div>
+    </main>
+    
+    <footer></footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        //ここに処理を追加
+        $("#gu_btn").on("click", function () {
+        const min = 0;
+        const max = 2;
+        const randomnumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(randomnumber);
+    
+        if (randomnumber === 0) {
+            $( "#com_hand" ).text( "グー" );
+            $( "#result" ).text( "あいこ" );
+        }else if (randomnumber === 1) {
+            $( "#com_hand" ).text( "チョキ" );
+            $( "#result" ).text( "勝ち" );
+        }else if (randomnumber === 2) {
+            $( "#com_hand" ).text( "パー" );
+            $( "#result" ).text( "負け" );
+        }
+        });
+    
+        $("#cho_btn").on("click", function () {
+        const min = 0;
+        const max = 2;
+        const randomnumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(randomnumber);
+    
+        if (randomnumber === 0) {
+            $( "#com_hand" ).text( "グー" );
+            $( "#result" ).text( "負け" );
+        }else if (randomnumber === 1) {
+            $( "#com_hand" ).text( "チョキ" );
+            $( "#result" ).text( "あいこ" );
+        }else if (randomnumber === 2) {
+            $( "#com_hand" ).text( "パー" );
+            $( "#result" ).text( "勝ち" );
+        }
+        });
+    
+        $("#par_btn").on("click", function () {
+        const min = 0;
+        const max = 2;
+        const randomnumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(randomnumber);
+    
+        if (randomnumber === 0) {
+            $( "#com_hand" ).text( "グー" );
+            $( "#result" ).text( "勝ち" );
+        }else if (randomnumber === 1) {
+            $( "#com_hand" ).text( "チョキ" );
+            $( "#result" ).text( "負け" );
+        }else if (randomnumber === 2) {
+            $( "#com_hand" ).text( "パー" );
+            $( "#result" ).text( "あいこ" );
+        }
+        });
+    
+    </script>
+    
+    </body>
+    
+    </html>
